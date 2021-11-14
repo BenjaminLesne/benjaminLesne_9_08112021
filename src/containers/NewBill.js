@@ -17,18 +17,30 @@ export default class NewBill {
     new Logout({ document, localStorage, onNavigate });
   }
   handleChangeFile = (e) => {
+    const input = document.querySelector(`input[data-testid="file"]`);
     const file = this.document.querySelector(`input[data-testid="file"]`)
       .files[0];
     const filePath = e.target.value.split(/\\/g);
     const fileName = filePath[filePath.length - 1];
-    this.firestore.storage
-      .ref(`justificatifs/${fileName}`)
-      .put(file)
-      .then((snapshot) => snapshot.ref.getDownloadURL())
-      .then((url) => {
-        this.fileUrl = url;
-        this.fileName = fileName;
-      });
+
+    const ext = file.name.match(/\.([^\.]+)$/)[1];
+    switch (ext) {
+      case "jpg":
+      case "jpeg":
+      case "png":
+        this.firestore?.storage
+          .ref(`justificatifs/${fileName}`)
+          .put(file)
+          .then((snapshot) => snapshot.ref.getDownloadURL())
+          .then((url) => {
+            this.fileUrl = url;
+            this.fileName = fileName;
+          });
+        input.setCustomValidity("");
+        break;
+      default:
+        input.setCustomValidity("Wrong file format (accepted: png, jpg, jpeg)");
+    }
   };
   handleSubmit = (e) => {
     e.preventDefault();
