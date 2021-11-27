@@ -19,8 +19,8 @@ In short, I invite you to not dig too much into the code of this repository 😅
 
 **Useful links:**
 
-- [Live demo 🌍](https://benjaminlesne.github.io/BenjaminLesne_9_23112021/)
-- [Repository 📖](https://github.com/BenjaminLesne/BenjaminLesne_9_23112021)
+- [Live demo 🌍](https://benjaminlesne.github.io/benjaminLesne_9_08112021/)
+- [Repository 📖](https://github.com/BenjaminLesne/BenjaminLesne_9_08112021)
 
 
 
