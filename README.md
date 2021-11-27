@@ -1,50 +1,31 @@
-**Comment lancer l'application en local** :
+# Billed
 
-Clonez le projet :
-```
-$ git clone https://github.com/OpenClassrooms-Student-Center/Billed-app-FR.git
-```
+Billed is a SaaS solution for HR teams, currently used to manage professional invoices.
 
-Allez au repo cloné :
-```
-$ cd Billed-app-FR
-```
-
-Installez les packages npm (décrits dans `package.json`) :
-```
-$ npm install
-```
-
-Installez live-server pour lancer un serveur local :
-```
-$ npm install -g live-server
-```
-
-Lancez l'application :
-```
-$ live-server
-```
-
-Puis allez à l'adresse : `http://127.0.0.1:8080/`
+My mission on this project was to fix a series of bugs (listed [here](https://www.notion.so/a7a612fc166747e78d95aa38106a55ec)), to improve the test coverage (for `container/NewBill.js`, `container/Bills.js` and `views/Bills`) and to make an End-to-End test case for the user interface ( `plan E2E.pdf` ).
 
 
-**Comment lancer tous les tests en local avec Jest :**
+The quality of the code of the initial project is disastrous, the code is poorly organized, not very readable, little/no documentation, a lot of side effects and undocumented state-dependent elements...
+I think that we should not write tests after the code got made, and even less when you aren't the original creator. The good practice, taught by OpenClassrooms in its courses, would be rather to realize the tests first when it is simpler to think about the different possibilities / errors / special cases...
 
-```
-$ npm run test
-```
+In short, I invite you to not dig too much into the code of this repository 😅
 
-**Comment lancer un seul test :**
+**PROJECT GOALS**:
 
-Installez jest-cli :
+- Writing unit tests with JavaScript
+- Writing integration tests with JavaScript
+- Debugging a web application with the Chrome Debugger
+- Writing a manual end-to-end test plan
 
-```
-$npm i -g jest-cli
-$jest src/__tests__/your_test_file.js
-```
+**Useful links:**
 
-**Comment voir la couverture de test :**
-
-`http://127.0.0.1:8080/coverage/lcov-report/`
+- [Live demo 🌍](https://benjaminlesne.github.io/BenjaminLesne_9_23112021/)
+- [Repository 📖](https://github.com/BenjaminLesne/BenjaminLesne_9_23112021)
 
 
+
+## License
+
+This project is part of the OpenClassrooms [Front-End Developer](https://openclassrooms.com/fr/paths/314-developpeur-front-end) course. The code is freely reusable, but the images / logo / figma mock-up do not belong to me.
+
+If you are also an OC student, you can freely draw inspiration from my work, but I obviously do not recommend copying parts of it.
